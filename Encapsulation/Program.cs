@@ -31,9 +31,9 @@ namespace Encapsulation
 			C.Print();
 #endif
 
-			Point A = new Point(2, 3);
-			Point B = new Point(7, 8);
-			Point C = new Point(A + B);
+			//Point A = new Point(2, 3);
+			//Point B = new Point(7, 8);
+			//Point C = new Point(A + B);
 			C.Print();
 			Point D = new Point(A - B);
 			D.Print();
