@@ -1,36 +1,45 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using System.Windows.Forms;
+using AbstractCeomrtey;
+using static System.Windows.Forms.AxHost;
 
-namespace AbstractCeomrtey
+namespace AbstractGeometry
 {
-	internal class Ractangle : Shape
+	class Rectangle : Shape
 	{
 		double width;
 		double height;
-
 		public double Width
 		{
 			get => width;
 			set => width = SizeFilter(value);
 		}
-	public double Height
+		public double Height
 		{
 			get => height;
 			set => height = SizeFilter(value);
 		}
-		public Ractangle(double Width, double Height, int startX)
-		public override double GetArea()=>Width*Height;
-		public override double GetPerimeter()=> 2 * (Width + Height);
-		public override void Draw()
+		public Rectangle
+			(
+				double width, double height,
+				int startX, int startY, int lineWidth, System.Drawing.Color color
+			)
+			: base(startX, startY, lineWidth, color)
 		{
-
-			Console.WriteLine("Здесь будет прямоугольник");
+			Width = width;
+			Height = height;
+		}
+		public override double GetArea() => Width * Height;
+		public override double GetPerimeter() => 2 * (Width + Height);
+		public override void Draw(PaintEventArgs e)
+		{
+			Pen pen = new Pen(Color, LineWidth);
+			e.Graphics.DrawRectangle(pen, StartX, StartY, (int)Width, (int)Height);
 		}
 	}
 }
