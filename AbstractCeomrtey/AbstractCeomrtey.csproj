@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{75280F4F-4397-4A31-AC27-849CE1E325CE}</ProjectGuid>
+    <ProjectGuid>{7D567651-7FD4-406B-BF01-7209AEFB77F7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Academy</RootNamespace>
-    <AssemblyName>Academy</AssemblyName>
+    <RootNamespace>AbstractCeomrtey</RootNamespace>
+    <AssemblyName>AbstractCeomrtey</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -35,26 +35,28 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Craduate.cs" />
-    <Compile Include="Human.cs" />
-    <Compile Include="HumanFactory.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Streamer.cs" />
-    <Compile Include="Student.cs" />
-    <Compile Include="Teacher.cs" />
+    <Compile Include="Ractangle.cs" />
+    <Compile Include="Shape.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="group.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
