@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Runtime.InteropServices;
+using AbstractCeomrtey;
 
 namespace AbstractGeometry
 {
-	class Program
+	internal class Program
 	{
 		static void Main(string[] args)
 		{
@@ -22,8 +23,14 @@ namespace AbstractGeometry
 				);
 			PaintEventArgs e = new PaintEventArgs(graphics, window_rect);
 
-			Rectangle rectangle = new Rectangle(100, 50, 100, 100, 3, System.Drawing.Color.Red);
+			Rectangle rectangle = new Rectangle(100, 50, 400, 25, 3, System.Drawing.Color.Red);
 			rectangle.Info(e);
+
+			Square square = new Square(75, 512, 16, 1, Color.DarkBlue);
+			square.Info(e);
+
+			Circle circle = new Circle(75, 570, 95, 3, Color.Yellow);
+			circle.Info(e);
 		}
 		[DllImport("kernel32.dll")]
 		public static extern IntPtr GetConsoleWindow();
