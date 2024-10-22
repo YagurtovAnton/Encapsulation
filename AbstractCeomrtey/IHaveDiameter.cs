@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AbstractCeomrtey
+namespace AbstractGeometry
 {
-	internal class IHaveDiameter
+	interface IHaveDiameter
 	{
 		double GetDiameter();
 		void DrawDiameter(System.Windows.Forms.PaintEventArgs e);

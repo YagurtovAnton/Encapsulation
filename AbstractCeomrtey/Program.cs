@@ -31,6 +31,12 @@ namespace AbstractGeometry
 
 			Circle circle = new Circle(75, 570, 95, 3, Color.Yellow);
 			circle.Info(e);
+
+			IsoscalesTriangle i_triangle = new IsoscalesTriangle(50,100,700,50,8, Color.Green);
+			i_triangle.Info(e);
+
+			EquilateralTriangle e_triangle= new EquilateralTriangle(500,500,100,5,Color.GreenYellow);
+			e_triangle.Info(e);
 		}
 		[DllImport("kernel32.dll")]
 		public static extern IntPtr GetConsoleWindow();
