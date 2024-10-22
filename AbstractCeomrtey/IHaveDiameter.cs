@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AbstractCeomrtey
 {
-	interface  IHaveDiagonal
+	internal class IHaveDiameter
 	{
-		double GetDiagonal();
-		void DrawDiagonal(System.Windows.Forms.PaintEventArgs e);
+		double GetDiameter();
+		void DrawDiameter(System.Windows.Forms.PaintEventArgs e);
 	}
 }
